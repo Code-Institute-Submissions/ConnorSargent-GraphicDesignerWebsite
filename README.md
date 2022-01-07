@@ -77,25 +77,25 @@ This website has been created using Django for the backend. The design is my own
 Below are the wireframes used to design the app layout.
 
 #### Home
-![wireframe for home page](static\wireframes\WireframesHome.png)
+![wireframe for home page](documentation\wireframes\WireframesHome.png)
 
 #### Log in
-![wireframe for login](static\wireframes\WireframesLogin.png)
+![wireframe for login](documentation\wireframes\WireframesLogin.png)
 
 #### Profile
-![wireframe for profile page](static\wireframes\WireframesProfile.png)
+![wireframe for profile page](documentation\wireframes\WireframesProfile.png)
 
 #### Contact
-![wireframe for  page](static\wireframes\WireframesContact.png)
+![wireframe for  page](documentation\wireframes\WireframesContact.png)
 
 #### Store
-![wireframe for  display](static\wireframes\WireframesStore.png)
+![wireframe for  display](documentation\wireframes\WireframesStore.png)
 
 #### Product
-![wireframe for  display](static\wireframes\WireframesProduct.png)
+![wireframe for  display](documentation\wireframes\WireframesProduct.png)
 
 #### Product Management
-![wireframe for  display](static\wireframes\WireframesProductManagement.png)
+![wireframe for  display](documentation\wireframes\WireframesProductManagement.png)
 
 ### Wireframe changes 
  - 
