@@ -1,0 +1,100 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgb(60, 43, 78) 0%, rgba(94, 66, 124, 1) 50%, rgba(132, 76, 135, 1) 100%);
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: #fafafa;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Shizuru', cursive;
+    color: #ffffff;
+}
+
+.logo-font {
+    font-family: 'Shizuru', cursive;
+}
+
+/* from Bulma formats FontAwesome Icons */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.btn-yellow {
+    background-color: #ec5ce5 !important;
+    color: #fafafa !important;
+}
+
+.btn-yellow:hover {
+    background-color: #8d2f8d !important;
+}
+
+/* Index/Home */
+
+.hero_image {
+    background-image: url("/media/homepage_image.jpg");
+    height: 80%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding-top: 50px;
+}
+
+.jumbotron-text {
+    padding-top: 5%;
+    margin-left: 2rem;
+}
+
+.jumbotron .lead {
+    color: #fafafa;
+}
+
+.home-card {
+    background: none;
+    border: none;
+}
+
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 5px;
+    }
+}
