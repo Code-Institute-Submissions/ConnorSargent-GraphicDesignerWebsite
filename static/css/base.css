@@ -23,8 +23,9 @@ h5 {
     color: #ffffff;
 }
 
-.logo-font {
+.logo {
     font-family: 'Shizuru', cursive;
+    text-shadow: 0px 0px 10px #ff00f2, 0px 0px 10px #ff00f2, 0px 0px 10px #ff00f2;
 }
 
 /* from Bulma formats FontAwesome Icons */
@@ -40,26 +41,32 @@ h5 {
     width: fit-content;
 }
 
-.btn-yellow {
+.btn-pink {
     background-color: #ec5ce5 !important;
     color: #fafafa !important;
+
+    margin: 20px;
 }
 
-.btn-yellow:hover {
+.btn-pink:hover {
     background-color: #8d2f8d !important;
 }
 
-/* Index/Home */
+/* ____Index/Home____ */
 
 .hero_image {
     background-image: url("/media/homepage_image.jpg");
-    height: 80%;
-    width: 100%;
+    height: 80vh;
+    width: 100vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
     padding-top: 50px;
+}
+
+.main-title{
+    text-shadow: 0px 0px 10px #ff00f2, 0px 0px 10px #ff00f2, 0px 0px 10px #ff00f2;
 }
 
 .jumbotron-text {
@@ -76,16 +83,32 @@ h5 {
     border: none;
 }
 
+.home-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: scale-down;
+    object-position: center;
+}
 
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
+
+/*____Media Queries____/*
+
+
+/* Large Screens*/
+@media screen and (max-width: 1199px) {
+
+    /* Slightly larger container on xl screens */
     .container {
         max-width: 80%;
     }
 }
 
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
+
+
+/* laptops */
+@media screen and (max-width: 991px) {
+
+    /* fixed top navbar only on medium and up */
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
@@ -96,5 +119,23 @@ h5 {
 
     .header-container {
         padding-top: 5px;
+    }
+
+    .home-card h2{
+        font-size: 17pt
+    }
+}
+
+/* Tablets */
+@media screen and (max-width: 767px) {
+    .main-title{
+        font-size: 70pt;
+    }
+}
+
+/* Phones */
+@media screen and (max-width: 567px) {
+    .main-title{
+        font-size: 50pt;
     }
 }
