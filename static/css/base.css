@@ -11,7 +11,7 @@ body {
     background-attachment: fixed;
 
     font-family: 'Be Vietnam Pro', sans-serif;
-    color: #fafafa;
+    color: white;
 }
 
 h1,
@@ -20,7 +20,7 @@ h3,
 h4,
 h5 {
     font-family: 'Shizuru', cursive;
-    color: #ffffff;
+    color: white;
 }
 
 .logo {
@@ -43,7 +43,7 @@ h5 {
 
 .btn-pink {
     background-color: #ec5ce5 !important;
-    color: #fafafa !important;
+    color: white !important;
 
     margin: 20px;
 }
@@ -52,7 +52,113 @@ h5 {
     background-color: #8d2f8d !important;
 }
 
+
+/* ____Header/Nav____ */
+.header-container{
+    padding: 5;
+    padding-top: 0;
+}
+
+#topnav{
+    background-color: rgb(60, 43, 78);
+}
+
+.navbar-light{
+    background-color: rgb(60, 43, 78);
+}
+
+.navbar-light .navbar-toggler {
+    color: black;
+    background-color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-light .navbar-nav .show>.nav-link {
+    color: #ec5ce5;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #ec5ce5;
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-link :hover,
+.nav-link :active,
+.nav-link :focus{
+    color: #ec5ce5;
+}
+
+.search-button{
+    background-color: #dddddd;
+    color: #8d2f8d;
+    border: 4px solid #dddddd;
+}
+
+.search-button :hover,
+.search-button :active,
+.search-button :focus{
+    color: #ec5ce5;
+}
+
+/* From https://www.html.am/html-codes/marquees/css-marquee.cfm */
+.marquee {
+    height: 50px;	
+    overflow: hidden;
+    position: relative;
+    font-size: 15pt;
+    color: white;
+    text-shadow: 0px 0px 10px #ff00f2, 0px 0px 10px #ff00f2, 0px 0px 10px #ff00f2;
+   }
+
+   .marquee p{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    /* Starting position */
+    -moz-transform:translateX(100%);
+    -webkit-transform:translateX(100%);	
+    transform:translateX(100%);
+    /* Apply animation to this element */	
+    -moz-animation: scroll-left 30s linear infinite;
+    -webkit-animation: scroll-left 30s linear infinite;
+    animation: scroll-left 30s linear infinite;
+   }
+   /* Move it (define the animation) */
+   @-moz-keyframes scroll-left {
+    0%   { -moz-transform: translateX(100%); }
+    100% { -moz-transform: translateX(-100%); }
+   }
+   @-webkit-keyframes scroll-left {
+    0%   { -webkit-transform: translateX(100%); }
+    100% { -webkit-transform: translateX(-100%); }
+   }
+   @keyframes scroll-left {
+    0%   { 
+    -moz-transform: translateX(100%); /* Browser bug fix */
+    -webkit-transform: translateX(100%); /* Browser bug fix */
+    transform: translateX(100%); 		
+    }
+    100% { 
+    -moz-transform: translateX(-100%); /* Browser bug fix */
+    -webkit-transform: translateX(-100%); /* Browser bug fix */
+    transform: translateX(-100%); 
+    }
+   }
+
 /* ____Index/Home____ */
+
+.jumbotron {
+    margin-top: 100px;
+}
 
 .hero_image {
     background-image: url("/media/homepage_image.jpg");
@@ -61,8 +167,6 @@ h5 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    padding-top: 50px;
 }
 
 .main-title{
@@ -75,7 +179,7 @@ h5 {
 }
 
 .jumbotron .lead {
-    color: #fafafa;
+    color: white;
 }
 
 .home-card {
