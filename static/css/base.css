@@ -48,7 +48,9 @@ h5 {
     margin: 20px;
 }
 
-.btn-pink:hover {
+.btn-pink:hover,
+.btn-pink:active,
+.btn-pink:focus{
     background-color: #8d2f8d !important;
 }
 
@@ -59,28 +61,30 @@ h5 {
     padding-top: 0;
 }
 
+/* Navbar background color, Keep delivery banner seperate */
 #topnav{
     background-color: rgb(60, 43, 78);
 }
 
-.navbar-light{
+.navbar{
     background-color: rgb(60, 43, 78);
 }
 
-.navbar-light .navbar-toggler {
+/* Navbar links */
+.navbar-toggler {
     color: black;
     background-color: white;
 }
 
-.navbar-light .navbar-nav .nav-link {
+.navbar-nav .nav-link {
     color: white;
 }
 
-.navbar-light .navbar-nav .show>.nav-link {
+.navbar-nav .show>.nav-link {
     color: #ec5ce5;
 }
 
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+.navbar-nav .nav-link:focus, .navbar-nav .nav-link:hover {
     color: #ec5ce5;
 }
 
@@ -94,6 +98,7 @@ h5 {
     color: #ec5ce5;
 }
 
+/* Searchbar button*/
 .search-button{
     background-color: #dddddd;
     color: #8d2f8d;
@@ -106,6 +111,7 @@ h5 {
     color: #ec5ce5;
 }
 
+/* Delivery banner */
 /* From https://www.html.am/html-codes/marquees/css-marquee.cfm */
 .marquee {
     height: 50px;	
