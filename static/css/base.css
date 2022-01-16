@@ -210,7 +210,17 @@ h5 {
 }
 
 .product-card .rating {
-    color: rgb(189, 157, 16)
+    color: rgb(189, 157, 16);
+}
+
+/*____Product Details____*/
+
+.product-details img {
+    border-radius: 15px;
+}
+
+.product-details .rating {
+    color: rgb(189, 157, 16);
 }
 
 /*____Media Queries____/*
