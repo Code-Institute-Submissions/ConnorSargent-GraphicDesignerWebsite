@@ -2,25 +2,24 @@
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
             <a class="font-weight-bold nav-link mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Products
+                Store
             </a>
             <div class="dropdown-menu" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
-                <a href="" class="dropdown-item ">By Category</a>
+                <a href="{% url 'products' %}?category=print" class="dropdown-item">Prints</a>
+                <a href="{% url 'products' %}?category=sticker" class="dropdown-item ">Stickers</a>
             </div>
         </li>
 
         <li class="nav-item">
             <a class="font-weight-bold nav-link mr-5" href="#">
-                Prints
+                Me!
             </a>
         </li>
 
         <li class="nav-item">
             <a class="font-weight-bold nav-link mr-5" href="#">
-                Stickers
+                Contact
             </a>
         </li>
     </ul>
