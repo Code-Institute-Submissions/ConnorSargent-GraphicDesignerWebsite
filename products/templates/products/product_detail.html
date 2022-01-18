@@ -36,6 +36,13 @@
         <div class="col-12 col-md-6 col-lg-4">
             <div class="product-details-container mb-5 mt-md-5">
                 <p class="mb-4 display-4">{{ product.name }}</p>
+                {% if product.category %}
+                    <p class="small mt-1 mb-0 text-decoration-none category">
+                        <a href="{% url 'products' %}?category={{ product.category.name }}">
+                            <i class="fas fa-paint-brush mr-1"></i>{{ product.category.friendly_name }}
+                        </a>
+                    </p>
+                {% endif %}
                 <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
                 {% if product.rating %}
                 <small><i class="fas fa-star mr-1 rating"></i>{{ product.rating }} / 5</small>
