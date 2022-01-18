@@ -71,8 +71,11 @@ h5 {
 
 /* Navbar links */
 .navbar-toggler {
-    color: black;
     background-color: white;
+}
+
+.navbar-toggler-icon{
+    color: #8d2f8d;
 }
 
 .navbar-nav .nav-link {
@@ -252,6 +255,11 @@ h5 {
     .home-card h2{
         font-size: 17pt
     }
+
+     /* push content down from nav */
+     .top-container{
+        margin-top: 100px;
+    }
 }
 
 /* Tablets */
@@ -265,5 +273,17 @@ h5 {
 @media screen and (max-width: 567px) {
     .main-title{
         font-size: 50pt;
+    }
+
+    .top-container{
+        margin-top: 90px;
+    }
+
+    .mobile-nav-link{
+        font-size: 10pt;
+    }
+
+    .mobile-dropdown{
+        padding: 0;
     }
 }
