@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import *
+from .forms import ReviewForm
 from .models import Review
 
 # Create your views here.
@@ -27,7 +27,7 @@ def add_review(request):
                 return redirect("home")
         else:
             form = ReviewForm()
-        return render(request, 'home/index.html', {"form": form})
+        return render(request, 'home', {"form": form})
 
 
 def delete_review(request, review_id):
@@ -38,3 +38,26 @@ def delete_review(request, review_id):
             review.delete()
 
         return redirect("home")
+
+
+def edit_review(request, review_id):
+    if request.user.is_authenticated:
+        review = Review.objects.get(id=review_id)
+
+        if request.user == review.user:
+
+            if request.method == "POST":
+                form = ReviewForm(request.POST, instance=review)
+                if form.is_valid():
+                    data = form.save(commit=False)
+                    if (data.rating > 5) or (data.rating < 0):
+                        error = "Out or range. Please select rating from 0 to 5."
+                        return render(request, 'home/edit_review.html', {"error": error, "form": form})
+                    else:
+                        data.save()
+                        return redirect("home")
+            else:
+                form = ReviewForm(instance=review)
+                return render(request, 'home/edit_review.html', {"form": form})
+        else:
+            return redirect("home")
