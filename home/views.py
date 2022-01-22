@@ -28,3 +28,13 @@ def add_review(request):
         else:
             form = ReviewForm()
         return render(request, 'home/index.html', {"form": form})
+
+
+def delete_review(request, review_id):
+    if request.user.is_authenticated:
+        review = Review.objects.get(id=review_id)
+
+        if request.user == review.user:
+            review.delete()
+
+        return redirect("home")
