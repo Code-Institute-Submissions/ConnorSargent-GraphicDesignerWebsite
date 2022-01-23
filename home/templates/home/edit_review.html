@@ -6,7 +6,7 @@
 
 <div class="top-container"></div>
 
-<div class="container">
+<div class="container edit-review">
     <h2 class="text-center">Edit Review</h2>
     <form action="" method="POST">
         {% csrf_token %}
@@ -14,7 +14,8 @@
         {% if error %}
         <strong>{{ error }}</strong>
         {% endif %}
-        <input type="submit" value="Save Changes" class="btn">
+        <input type="submit" value="Save Changes" class="btn btn-pink"
+        onclick="return confirm('Testamonial successfully updated!');">
     </form>
 </div>
 

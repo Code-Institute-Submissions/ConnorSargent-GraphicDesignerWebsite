@@ -55,43 +55,82 @@
 <div class="container">
   <h1 class="text-center">Testamonials</h1>
 
-{% for review in reviews %}
+  <div class="row">
+    <div class="col">
+      <a class="btn mb-3 mr-1 text-white" href="#carouselbtn" role="button" data-slide="prev">
+        <i class="fa fa-arrow-left"></i>
+        <a class="btn mb-3 text-white" href="#carouselbtn" role="button" data-slide="next">
+          <i class="fa fa-arrow-right"></i>
+        </a>
+      </a>
+    </div>
+  </div>
 
-<div class="row">
-  <div class="col">
-    <p>{{ review.user.username }}</p>
-    <p>{{ review.rating }}</p>
-    <p>{{ review.comment }}</p>
-    {% if request.user == review.user %}
-    <a href="{% url 'edit_review' review.id %}">Edit</a>
-    <a href="{% url 'delete_review' review.id %}" onclick="return confirm('Are you sure you want to delete this?');">Delete
-    </a>
-    {% endif %}
+  <div class="row">
+    <div class="col-12">
+      <div id="carouselbtn" class="carousel slide" data-ride="carousel">
 
+        <div class="carousel-inner">
+          {% for review in reviews %}
+          {% if forloop.first %}
+          <div class="active carousel-item">
+            {% else %}
+            <div class="carousel-item">
+              {% endif %}
+
+
+              <div class="card text-center review-card">
+                <h3 class="card-title">{{ review.user.username }}</h3>
+                <hr>
+                <p class="card-text">{{ review.comment }}</p>
+                <p class="card-text"><i class="fas fa-star mr-1 rating"></i>{{ review.rating }} / 5</p>
+
+                {% if request.user == review.user %}
+                <hr>
+                <div class="row text-center">
+                  <div class="col">
+                    <a class="btn btn-outline-success" href="{% url 'edit_review' review.id %}">Edit</a>
+                    <a class="btn btn-outline-danger" href="{% url 'delete_review' review.id %}"
+                      onclick="return confirm('Are you sure you want to delete this?');">Delete
+                    </a>
+                  </div>
+                </div>
+                {% endif %}
+              </div>
+
+            </div>
+          {% endfor %}
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
 </div>
-<br>
 
-{% endfor %}
 
-<br>
+{% if user.is_authenticated %}
+<div class="container">
+  {% else %}
+  <div class="container d-none">
+    {% endif %}
 
-<h3 class="text-center">Add Testamonial</h3>
-<form action="{% url 'add_review' %}" method="POST">
-  {% csrf_token %}
-  <label for="comment">Review</label>
-  <textarea name="comment" id="comment" cols="30" rows="5" class="form-control"></textarea>
+    <h3 class="text-center">Add Testamonial</h3>
+    <form class="review-form" action="{% url 'add_review' %}" method="POST">
+      {% csrf_token %}
+      <textarea name="comment" id="comment" cols="30" rows="5" class="form-control" placeholder="Leave your comment here..."></textarea></textarea>
 
-  <label for="rating">Rating</label>
-  <input type="range" id="rangeInput" name="rating" min="0" max="5" value="0" step="0.5"
-    oninput="amount.value=rangeInput.value">
+      <label for="rating">Rating</label>
+      <input type="range" id="rangeInput" name="rating" min="0" max="5" value="0" step="0.1"
+        oninput="amount.value=rangeInput.value">
 
-  <output name="amount" id="amount" for="rangeInput">0</output>
+      <output name="amount" id="amount" for="rangeInput">0</output>
 
-  <br>
-  <input type="submit" class="btn" value="Add Review" onclick="return confirm('Testamonial successfully submitted!');">
-</form>
+      <input type="submit" class="btn btn-pink ml-3" value="Add Review"
+        onclick="return confirm('Testamonial successfully submitted!');">
 
+    </form>
+  </div>
 </div>
 
 {% endblock %}
