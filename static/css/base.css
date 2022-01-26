@@ -281,6 +281,9 @@ border-radius: 15px;
 .product-details a { 
     color: white; 
 }
+.product-details input {
+    border-radius: 15px;
+}
 
 /*____Media Queries____/*
 
