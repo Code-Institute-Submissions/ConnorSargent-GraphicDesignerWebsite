@@ -96,7 +96,7 @@ h5 {
 }
 
 .nav-link{
-    color: white;
+    color: white !important;
 }
 
 .nav-link :hover,
@@ -118,6 +118,10 @@ h5 {
 .search-button :active,
 .search-button :focus{
     color: #ec5ce5;
+}
+
+.bag-icon .text-info .text-primary{
+    color: #ec5ce5 !important;
 }
 
 /* Delivery banner */
@@ -285,7 +289,12 @@ border-radius: 15px;
     border-radius: 15px;
 }
 
-/*____Media Queries____/*
+/*____Bag____*/
+.bag-table img{
+    border-radius: 15px;
+}
+
+/*____Media Queries____*/
 
 
 /* Large Screens*/
@@ -344,5 +353,13 @@ border-radius: 15px;
 
     .mobile-dropdown{
         padding: 0;
+    }
+
+    .bag-table {
+        font-size: 12px;
+    }
+
+    .bag-btn {
+        font-size: 15px;
     }
 }
