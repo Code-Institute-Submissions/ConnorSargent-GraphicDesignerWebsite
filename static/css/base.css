@@ -50,7 +50,6 @@ h5 {
     color: white !important;
 
     border-radius: 15px;
-    margin-top: 20px;
 }
 
 .btn-pink:hover,
@@ -286,7 +285,8 @@ border-radius: 15px;
     color: white; 
 }
 .product-details input {
-    border-radius: 15px;
+    border-radius: 15px !important;
+    margin: 5px;
 }
 
 /*____Bag____*/
