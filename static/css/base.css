@@ -50,6 +50,7 @@ h5 {
     color: white !important;
 
     border-radius: 15px;
+    margin: 5px;
 }
 
 .btn-pink:hover,
@@ -294,16 +295,17 @@ border-radius: 15px;
     border-radius: 15px;
 }
 
+.bag-table .qty_input{
+    border-radius: 15px !important;
+    margin: 2px;
+}
+
 /*____Media Queries____*/
 
 
 /* Large Screens*/
 @media screen and (max-width: 1199px) {
 
-    /* Slightly larger container on xl screens */
-    .container {
-        max-width: 90%;
-    }
 }
 
 
@@ -343,8 +345,12 @@ border-radius: 15px;
         font-size: 50pt;
     }
 
+    .container{
+        width: 100%;
+    }
+
     .top-container{
-        margin-top: 90px;
+        margin-top: 95px;
     }
 
     .mobile-nav-link{
@@ -361,5 +367,9 @@ border-radius: 15px;
 
     .bag-btn {
         font-size: 15px;
+    }
+
+    .bag-table .qty_input{
+        width: fit-content;
     }
 }
