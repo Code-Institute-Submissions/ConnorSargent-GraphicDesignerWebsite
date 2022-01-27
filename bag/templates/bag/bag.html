@@ -16,7 +16,6 @@
     <div class="row">
         <div class="col">
             <h2 class="mb-4">Shopping Bag</h2>
-            <hr>
         </div>
     </div>
 
@@ -81,7 +80,7 @@
                                 data-size="{{ item.size }}"><small>Remove</small></a>
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </td>
                     </tr>
                     {% endfor %}
@@ -106,7 +105,7 @@
                                 </span>
                                 <span>Keep Shopping</span>
                             </a>
-                            <a href="" class="btn btn-pink btn-lg bag-btn">
+                            <a href="{% url 'checkout' %}" class="btn btn-pink btn-lg bag-btn">
                                 <span>Secure Checkout</span>
                                 <span class="icon">
                                     <i class="fas fa-lock"></i>
@@ -136,22 +135,22 @@
 
 <script type="text/javascript">
     // Update quantity on click
-    $('.update-link').click(function (e) {
-        var form = $(this).prev('.update-form');
-        console.log($(this).prev());
+    £('.update-link').click(function (e) {
+        var form = £(this).prev('.update-form');
+        console.log(£(this).prev());
         form.submit();
     })
 
     // Remove item and reload on click
-    $('.remove-item').click(function (e) {
+    £('.remove-item').click(function (e) {
         var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/bag/remove/${itemId}/`;
+        var itemId = £(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove/£{itemId}/`;
         var data = {
             'csrfmiddlewaretoken': csrfToken
         };
 
-        $.post(url, data)
+        £.post(url, data)
             .done(function () {
                 location.reload();
             });
