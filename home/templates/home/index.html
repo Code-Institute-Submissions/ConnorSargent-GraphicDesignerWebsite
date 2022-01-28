@@ -97,8 +97,8 @@
                 <hr>
                 <div class="row text-center">
                   <div class="col">
-                    <a class="btn btn-outline-success" href="{% url 'edit_review' review.id %}">Edit</a>
-                    <a class="btn btn-outline-danger" href="{% url 'delete_review' review.id %}"
+                    <a class="btn btn-success" href="{% url 'edit_review' review.id %}">Edit</a>
+                    <a class="btn btn-danger" href="{% url 'delete_review' review.id %}"
                       onclick="return confirm('Are you sure you want to delete this?');">Delete
                     </a>
                   </div>
