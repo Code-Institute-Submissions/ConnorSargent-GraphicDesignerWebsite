@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+
 from .models import Product, Category
+from .forms import ProductForm
 
 # Create your views here.
 
@@ -13,7 +15,7 @@ def all_products(request):
     categories = None
 
     if request.GET:
-        
+
         if 'category' in request.GET:
             categories = request.GET['category'].split(',') #Split for multiple categories in one nav link
             products = products.filter(category__name__in=categories)
@@ -47,3 +49,23 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def add_product(request):
+    """ Add product to store """
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product added succsessfully!')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Failed to add product.')
+    else:
+        form = ProductForm()
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

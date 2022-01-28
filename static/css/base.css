@@ -102,6 +102,10 @@ h5 {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
+.allauth-form-inner-content .alert-block {
+    border-radius: 15px;
+}
+
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
 	color: #fff;
@@ -412,6 +416,18 @@ border-radius: 15px;
 .product-details input {
     border-radius: 15px !important;
     margin: 5px;
+}
+
+/*____ Add Product ____*/
+.add-product input,
+.add-product select,
+.add-product textarea {
+    border-radius: 15px !important;
+    background-color: white;
+}
+
+.add-product .form-control-file{
+    color: black;
 }
 
 /*____Bag____*/
