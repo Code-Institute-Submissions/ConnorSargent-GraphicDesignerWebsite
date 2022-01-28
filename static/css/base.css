@@ -45,12 +45,12 @@ h5 {
     width: fit-content;
 }
 
-.btn-pink {
+.btn-pink{
     background-color: #ec5ce5 !important;
     color: white !important;
 
-    border-radius: 15px;
-    margin: 5px;
+    border-radius: 15px !important;
+    margin: 5px !important;
 }
 
 .btn-pink:hover,
@@ -62,6 +62,51 @@ h5 {
 /* push content down from nav */
 .top-container{
     margin-top: 130px;
+}
+
+
+/*____ Allauth ____*/
+
+.allauth-form-inner-content input{
+    border-radius: 15px;
+}
+
+.allauth-form-inner-content a{
+    color : #ffc107;
+}
+
+.allauth-form-inner-content .invalid-feedback{
+    color : #ffc107;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #ec5ce5;
+    border: none;
+    border-radius: 15px;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+	color: #fff;
+    background-color: #8d2f8d;
+    border-color: none;
 }
 
 /* ____Toasts (Bootstrap)____ */
