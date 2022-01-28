@@ -418,15 +418,15 @@ border-radius: 15px;
     margin: 5px;
 }
 
-/*____ Add Product ____*/
-.add-product input,
-.add-product select,
-.add-product textarea {
+/*____ Add/Edit Product ____*/
+.add-edit-product input,
+.add-edit-product select,
+.add-edit-product textarea {
     border-radius: 15px !important;
     background-color: white;
 }
 
-.add-product .form-control-file{
+.add-edit-product .form-control-file{
     color: black;
 }
 
