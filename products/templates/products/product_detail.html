@@ -42,8 +42,8 @@
                 </p>
                 {% endif %}
                 <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
-                {% if product.rating %}
-                <small><i class="fas fa-star mr-1 rating"></i>{{ product.rating }} / 5</small>
+                {% if average_rating %}
+                <small><i class="fas fa-star mr-1 rating"></i>{{ average_rating }} / 5</small>
                 {% else %}
                 <small class="text-muted">No Rating</small>
                 {% endif %}
@@ -112,7 +112,7 @@
                         {{ productreview.user.username }}
                     </footer>
                 </blockquote>
-                {% if request.user == productreview.user %}
+                {% if request.user == productreview.user or request.user.is_superuser %}
                 <hr>
                 <div class="row text-center">
                     <div class="col">

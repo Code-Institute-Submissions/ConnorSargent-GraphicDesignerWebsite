@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.db.models import Q
+from django.db.models import Q, Avg
 
 from .models import Product, Category, ProductReview
 from .forms import ProductForm, ProductReviewForm
@@ -46,9 +46,15 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     productreviews = ProductReview.objects.filter(product=product_id)
 
+    average_rating = productreviews.aggregate(Avg("rating"))["rating__avg"]
+    if average_rating is None:
+        average_rating = 0
+    average_rating = round(average_rating, 2)
+
     context = {
         'product': product,
         'productreviews': productreviews,
+        "average_rating": average_rating
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -121,6 +127,7 @@ def delete_product(request, product_id):
     return redirect(reverse('products'))
 
 
+@login_required
 def add_product_review(request, product_id):
     if request.user.is_authenticated:
         product = get_object_or_404(Product, pk=product_id)
@@ -139,12 +146,13 @@ def add_product_review(request, product_id):
         return render(request, 'product_detail.html', {"form": form})
 
 
+@login_required
 def edit_product_review(request, product_id, productreview_id):
     if request.user.is_authenticated:
         product = get_object_or_404(Product, pk=product_id)
         productreview = ProductReview.objects.get(product=product, id=productreview_id)
 
-        if request.user == productreview.user:
+        if request.user == productreview.user or request.user.is_superuser:
             if request.method == "POST":
                 form = ProductReviewForm(request.POST, instance=productreview)
                 if form.is_valid():
@@ -162,12 +170,13 @@ def edit_product_review(request, product_id, productreview_id):
             return redirect("product_detail", product_id)
 
 
+@login_required
 def delete_product_review(request, product_id, productreview_id):
     if request.user.is_authenticated:
         product = get_object_or_404(Product, pk=product_id)
         productreview = ProductReview.objects.get(product=product, id=productreview_id)
 
-        if request.user == productreview.user:
+        if request.user == productreview.user or request.user.is_superuser:
             productreview.delete()
 
         return redirect("product_detail", product_id)
