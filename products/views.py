@@ -140,8 +140,8 @@ def add_product_review(request, product_id):
                 data.user = request.user
                 data.product = product
                 data.save()
-                return redirect("product_detail", product_id)
                 messages.info(request, 'Review Added')
+                return redirect("product_detail", product_id)
         else:
             form = ProductReviewForm()
         return render(request, 'product_detail.html', {"form": form})
@@ -163,8 +163,9 @@ def edit_product_review(request, product_id, productreview_id):
                         return render(request, 'products/edit_product_review.html', {"error": error, "form": form})
                     else:
                         data.save()
-                        return redirect("product_detail", product_id)
                         messages.info(request, 'Review Edited')
+                        return redirect("product_detail", product_id)
+                        
             else:
                 form = ProductReviewForm(instance=productreview)
                 return render(request, 'products/edit_product_review.html', {"form": form})

@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import ReviewForm
 from .models import Review
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -14,6 +15,7 @@ def index(request):
     return render(request, 'home/index.html', context)
 
 
+@login_required
 def add_review(request):
     if request.user.is_authenticated:
         if request.method == "POST":
@@ -24,24 +26,27 @@ def add_review(request):
                 data.rating = request.POST["rating"]
                 data.user = request.user
                 data.save()
-                return redirect("home")
                 messages.info(request, 'Testamonial Added')
+                return redirect("home")
         else:
             form = ReviewForm()
         return render(request, 'home', {"form": form})
 
 
+@login_required
 def delete_review(request, review_id):
     if request.user.is_authenticated:
         review = Review.objects.get(id=review_id)
 
         if request.user == review.user:
-            review.delete()
             messages.info(request, 'Testamonial Deleted')
+            review.delete()
+            
 
         return redirect("home")
 
 
+@login_required
 def edit_review(request, review_id):
     if request.user.is_authenticated:
         review = Review.objects.get(id=review_id)
@@ -57,8 +62,9 @@ def edit_review(request, review_id):
                         return render(request, 'home/edit_review.html', {"error": error, "form": form})
                     else:
                         data.save()
-                        return redirect("home")
                         messages.info(request, 'Testamonial Edited')
+                        return redirect("home")
+                       
             else:
                 form = ReviewForm(instance=review)
                 return render(request, 'home/edit_review.html', {"form": form})
