@@ -141,6 +141,7 @@ def add_product_review(request, product_id):
                 data.product = product
                 data.save()
                 return redirect("product_detail", product_id)
+                messages.info(request, 'Review Added')
         else:
             form = ProductReviewForm()
         return render(request, 'product_detail.html', {"form": form})
@@ -163,6 +164,7 @@ def edit_product_review(request, product_id, productreview_id):
                     else:
                         data.save()
                         return redirect("product_detail", product_id)
+                        messages.info(request, 'Review Edited')
             else:
                 form = ProductReviewForm(instance=productreview)
                 return render(request, 'products/edit_product_review.html', {"form": form})
@@ -178,5 +180,6 @@ def delete_product_review(request, product_id, productreview_id):
 
         if request.user == productreview.user or request.user.is_superuser:
             productreview.delete()
+            messages.info(request, 'Review Deleted')
 
         return redirect("product_detail", product_id)

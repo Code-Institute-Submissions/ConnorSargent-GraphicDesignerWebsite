@@ -25,6 +25,7 @@ def add_review(request):
                 data.user = request.user
                 data.save()
                 return redirect("home")
+                messages.info(request, 'Testamonial Added')
         else:
             form = ReviewForm()
         return render(request, 'home', {"form": form})
@@ -36,6 +37,7 @@ def delete_review(request, review_id):
 
         if request.user == review.user:
             review.delete()
+            messages.info(request, 'Testamonial Deleted')
 
         return redirect("home")
 
@@ -56,6 +58,7 @@ def edit_review(request, review_id):
                     else:
                         data.save()
                         return redirect("home")
+                        messages.info(request, 'Testamonial Edited')
             else:
                 form = ReviewForm(instance=review)
                 return render(request, 'home/edit_review.html', {"form": form})

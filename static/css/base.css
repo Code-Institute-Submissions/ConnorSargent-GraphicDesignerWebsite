@@ -320,6 +320,20 @@ h5 {
     }
 }
 
+.page-footer {
+    background-color: rgb(60, 43, 78);
+}
+
+.page-footer a {
+    font-size: 30px;
+    padding-left: 20px;
+    color: white;
+}
+
+.page-footer .socials {
+    font-size: 30px;
+}
+
 /* ____Index/Home____ */
 
 .hero_image {
