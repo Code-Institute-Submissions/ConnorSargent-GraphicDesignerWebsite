@@ -100,12 +100,20 @@
 
 
 <div class="container">
-    <div class="card">
+    <h2 class="text-center">Reviews</h2>
+    <div class="card-columns">
         {% for productreview in productreviews %}
-        <h3 class="card-title">{{ productreview.user.username }}</h3>
-        <hr>
-        <p class="card-text">{{ productreview.comment }}</p>
-        <p class="card-text"><i class="fas fa-star mr-1 rating"></i>{{ productreview.rating }} / 5</p>
+        <div class="card product-review-card">
+            <div class="card-body text-center text-black">
+                <p><i class="fas fa-star mr-1"></i>{{ productreview.rating }} / 5</p>
+                <blockquote class="blockquote">
+                    <p>{{ productreview.comment }}</p>
+                    <footer class="blockquote-footer">
+                        {{ productreview.user.username }}
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
         {% endfor %}
     </div>
 </div>

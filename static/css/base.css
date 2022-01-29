@@ -23,7 +23,7 @@ h5 {
     color: white;
 }
 
-.container{
+.container {
     margin: 25px auto 25px auto;
 }
 
@@ -45,7 +45,7 @@ h5 {
     width: fit-content;
 }
 
-.btn-pink{
+.btn-pink {
     background-color: #ec5ce5 !important;
     color: white !important;
 
@@ -55,34 +55,34 @@ h5 {
 
 .btn-pink:hover,
 .btn-pink:active,
-.btn-pink:focus{
+.btn-pink:focus {
     background-color: #8d2f8d !important;
 }
 
 /* push content down from nav */
-.top-container{
+.top-container {
     margin-top: 130px;
 }
 
 
 /*____ Allauth ____*/
 
-.allauth-form-inner-content input{
+.allauth-form-inner-content input {
     border-radius: 15px;
 }
 
-.allauth-form-inner-content a{
-    color : #ffc107;
+.allauth-form-inner-content a {
+    color: #ffc107;
 }
 
-.allauth-form-inner-content .invalid-feedback{
-    color : #ffc107;
+.allauth-form-inner-content .invalid-feedback {
+    color: #ffc107;
 }
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-	/* btn */
-	display: inline-block;
+    /* btn */
+    display: inline-block;
     font-weight: 400;
     color: #fff;
     text-align: center;
@@ -99,7 +99,7 @@ h5 {
     line-height: 1.5;
 
     /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content .alert-block {
@@ -107,8 +107,8 @@ h5 {
 }
 
 .allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
-	color: #fff;
+.allauth-form-inner-content input[type='submit']:hover {
+    color: #fff;
     background-color: #8d2f8d;
     border-color: none;
 }
@@ -133,20 +133,20 @@ h5 {
     height: 4px;
 }
 
-.custom-toast .bg-warning{
+.custom-toast .bg-warning {
     border-radius: 15px;
 }
 
-.custom-toast img{
+.custom-toast img {
     border-radius: 10px;
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
+    border-right: 4px solid transparent;
     border-bottom: 10px solid black;
     position: absolute;
     top: -10px;
@@ -194,11 +194,11 @@ h5 {
 
 /* ____Header/Nav____ */
 /* Navbar background color, Keep delivery banner seperate */
-#topnav{
+#topnav {
     background-color: rgb(60, 43, 78);
 }
 
-.navbar{
+.navbar {
     background-color: rgb(60, 43, 78);
 }
 
@@ -207,7 +207,7 @@ h5 {
     background-color: white;
 }
 
-.navbar-toggler-icon{
+.navbar-toggler-icon {
     color: #8d2f8d;
 }
 
@@ -219,51 +219,52 @@ h5 {
     color: #ec5ce5;
 }
 
-.navbar-nav .nav-link:focus, .navbar-nav .nav-link:hover {
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover {
     color: #ec5ce5;
 }
 
-.nav-link{
+.nav-link {
     color: white !important;
 }
 
 .nav-link :hover,
 .nav-link :active,
-.nav-link :focus{
+.nav-link :focus {
     color: #ec5ce5;
 }
 
 /* Searchbar button*/
-.search-button{
+.search-button {
     color: white;
 }
 
-.search-button-mobile{
+.search-button-mobile {
     color: black !important;
 }
 
 .search-button :hover,
 .search-button :active,
-.search-button :focus{
+.search-button :focus {
     color: #ec5ce5;
 }
 
-.bag-icon .text-info .text-primary{
+.bag-icon .text-info .text-primary {
     color: #ec5ce5 !important;
 }
 
 /* Delivery banner */
 /* From https://www.html.am/html-codes/marquees/css-marquee.cfm */
 .marquee {
-    height: 50px;	
+    height: 50px;
     overflow: hidden;
     position: relative;
     font-size: 15pt;
     color: white;
     text-shadow: 0px 0px 10px #ff00f2, 0px 0px 10px #ff00f2, 0px 0px 10px #ff00f2;
-   }
+}
 
-   .marquee p{
+.marquee p {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -271,35 +272,53 @@ h5 {
     line-height: 50px;
     text-align: center;
     /* Starting position */
-    -moz-transform:translateX(100%);
-    -webkit-transform:translateX(100%);	
-    transform:translateX(100%);
-    /* Apply animation to this element */	
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    /* Apply animation to this element */
     -moz-animation: scroll-left 30s linear infinite;
     -webkit-animation: scroll-left 30s linear infinite;
     animation: scroll-left 30s linear infinite;
-   }
-   /* Move it (define the animation) */
-   @-moz-keyframes scroll-left {
-    0%   { -moz-transform: translateX(100%); }
-    100% { -moz-transform: translateX(-100%); }
-   }
-   @-webkit-keyframes scroll-left {
-    0%   { -webkit-transform: translateX(100%); }
-    100% { -webkit-transform: translateX(-100%); }
-   }
-   @keyframes scroll-left {
-    0%   { 
-    -moz-transform: translateX(100%); /* Browser bug fix */
-    -webkit-transform: translateX(100%); /* Browser bug fix */
-    transform: translateX(100%); 		
+}
+
+/* Move it (define the animation) */
+@-moz-keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(100%);
     }
-    100% { 
-    -moz-transform: translateX(-100%); /* Browser bug fix */
-    -webkit-transform: translateX(-100%); /* Browser bug fix */
-    transform: translateX(-100%); 
+
+    100% {
+        -moz-transform: translateX(-100%);
     }
-   }
+}
+
+@-webkit-keyframes scroll-left {
+    0% {
+        -webkit-transform: translateX(100%);
+    }
+
+    100% {
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(100%);
+        /* Browser bug fix */
+        -webkit-transform: translateX(100%);
+        /* Browser bug fix */
+        transform: translateX(100%);
+    }
+
+    100% {
+        -moz-transform: translateX(-100%);
+        /* Browser bug fix */
+        -webkit-transform: translateX(-100%);
+        /* Browser bug fix */
+        transform: translateX(-100%);
+    }
+}
 
 /* ____Index/Home____ */
 
@@ -312,7 +331,7 @@ h5 {
     background-size: cover;
 }
 
-.main-title{
+.main-title {
     text-shadow: 0px 0px 10px #ff00f2, 0px 0px 10px #ff00f2, 0px 0px 10px #ff00f2;
 }
 
@@ -337,7 +356,7 @@ h5 {
     object-position: center;
 }
 
-.review-card{
+.review-card {
     padding: 10px;
     border-radius: 15px;
     background-color: rgba(0, 0, 0, 0.2);
@@ -347,23 +366,23 @@ h5 {
     font-family: 'Be Vietnam Pro', sans-serif !important;
 }
 
-.review-card .rating{
+.review-card .rating {
     color: rgb(189, 157, 16);
 }
 
-.review-form textarea{
-border-radius: 15px;
+.review-form textarea {
+    border-radius: 15px;
 }
 
 /*____Edit Review____*/
 
-.edit-review textarea{
+.edit-review textarea {
     width: 100%;
     border-radius: 15px;
     padding: 10px;
 }
 
-.edit-review input{
+.edit-review input {
     border-radius: 15px;
     padding: 10px;
 }
@@ -377,7 +396,7 @@ border-radius: 15px;
     padding: 19px;
 }
 
-.product-card img{
+.product-card img {
     border-radius: 10px;
 }
 
@@ -385,18 +404,17 @@ border-radius: 15px;
     color: rgb(189, 157, 16);
 }
 
-.product-card a
-{ 
-    color: #5518ab; 
+.product-card a {
+    color: #5518ab;
 }
 
-.products-link a{
+.products-link a {
     color: #ec5ce5;
 }
 
 .products-link :hover,
 .products-link :active,
-.products-link :focus{
+.products-link :focus {
     color: #ec5ce5 !important;
 }
 
@@ -410,13 +428,29 @@ border-radius: 15px;
     color: rgb(189, 157, 16);
 }
 
-.product-details a { 
-    color: white; 
+.product-details a {
+    color: white;
 }
+
 .product-details input {
     border-radius: 15px !important;
     margin: 5px;
 }
+
+/*____ Add/Edit Product ____*/
+.product-review-card {
+    color: #8d2f8d;
+    border-radius: 15px;
+}
+
+.product-review-card i {
+    color: rgb(189, 157, 16) !important;
+}
+
+.product-review-card .blockquote-footer {
+    color: #5518ab;
+}
+
 
 /*____ Add/Edit Product ____*/
 .add-edit-product input,
@@ -426,20 +460,20 @@ border-radius: 15px;
     background-color: white;
 }
 
-.add-edit-product a{
+.add-edit-product a {
     color: #ffc107;
 }
 
-.add-edit-product .form-control-file{
+.add-edit-product .form-control-file {
     color: black;
 }
 
 /*____Bag____*/
-.bag-table img{
+.bag-table img {
     border-radius: 15px;
 }
 
-.bag-table .qty_input{
+.bag-table .qty_input {
     border-radius: 15px !important;
     margin: 2px;
 }
@@ -448,9 +482,7 @@ border-radius: 15px;
 
 
 /* Large Screens*/
-@media screen and (max-width: 1199px) {
-
-}
+@media screen and (max-width: 1199px) {}
 
 
 
@@ -466,42 +498,42 @@ border-radius: 15px;
         z-index: 1030;
     }
 
-    .home-card h2{
+    .home-card h2 {
         font-size: 17pt
     }
 
-     /* push content down from nav */
-     .top-container{
+    /* push content down from nav */
+    .top-container {
         margin-top: 100px;
     }
 }
 
 /* Tablets */
 @media screen and (max-width: 767px) {
-    .main-title{
+    .main-title {
         font-size: 70pt;
     }
 }
 
 /* Phones */
 @media screen and (max-width: 567px) {
-    .main-title{
+    .main-title {
         font-size: 50pt;
     }
 
-    .container{
+    .container {
         width: 100%;
     }
 
-    .top-container{
+    .top-container {
         margin-top: 95px;
     }
 
-    .mobile-nav-link{
+    .mobile-nav-link {
         font-size: 10pt;
     }
 
-    .mobile-dropdown{
+    .mobile-dropdown {
         padding: 0;
     }
 
@@ -513,7 +545,7 @@ border-radius: 15px;
         font-size: 15px;
     }
 
-    .bag-table .qty_input{
+    .bag-table .qty_input {
         width: fit-content;
     }
 }
