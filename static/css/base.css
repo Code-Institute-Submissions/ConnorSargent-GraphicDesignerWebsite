@@ -426,6 +426,10 @@ border-radius: 15px;
     background-color: white;
 }
 
+.add-edit-product a{
+    color: #ffc107;
+}
+
 .add-edit-product .form-control-file{
     color: black;
 }
