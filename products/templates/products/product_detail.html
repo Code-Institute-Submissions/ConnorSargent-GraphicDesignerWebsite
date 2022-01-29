@@ -97,6 +97,44 @@
         </div>
     </div>
 </div>
+
+
+<div class="container">
+    <div class="card">
+        {% for productreview in productreviews %}
+        <h3 class="card-title">{{ productreview.user.username }}</h3>
+        <hr>
+        <p class="card-text">{{ productreview.comment }}</p>
+        <p class="card-text"><i class="fas fa-star mr-1 rating"></i>{{ productreview.rating }} / 5</p>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% if user.is_authenticated %}
+<div class="container">
+    {% else %}
+    <div class="container d-none">
+        {% endif %}
+
+        <h3 class="text-center">Add Review</h3>
+        <form class="review-form" action="{% url 'add_product_review' product.id %}" method="POST">
+            {% csrf_token %}
+            <textarea name="comment" id="comment" cols="30" rows="5" class="form-control"
+                placeholder="Leave your review here..."></textarea></textarea>
+
+            <label for="rating">Rating</label>
+            <input type="range" id="rangeInput" name="rating" min="0" max="5" value="0" step="0.1"
+                oninput="amount.value=rangeInput.value">
+
+            <output name="amount" id="amount" for="rangeInput">0</output>
+
+            <input type="submit" class="btn btn-pink ml-3" value="Add Review">
+
+        </form>
+    </div>
+</div>
+
 {% endblock %}
 
 {% block postloadjs %}

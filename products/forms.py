@@ -1,5 +1,5 @@
 from django import forms
-from .models import Product, Category
+from .models import Product, Category, ProductReview
 
 
 class ProductForm(forms.ModelForm):
@@ -15,3 +15,8 @@ class ProductForm(forms.ModelForm):
 
         self.fields['category'].choices = friendly_names
 
+
+class ProductReviewForm(forms.ModelForm):
+    class Meta:
+        model = ProductReview
+        fields = ("comment", "rating")
