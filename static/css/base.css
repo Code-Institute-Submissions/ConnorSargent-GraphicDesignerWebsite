@@ -357,17 +357,17 @@ h5 {
 }
 
 .review-card {
-    padding: 10px;
+    color: #8d2f8d;
     border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
 }
 
-.review-card h3 {
-    font-family: 'Be Vietnam Pro', sans-serif !important;
+.review-card i {
+    color: rgb(189, 157, 16) !important;
 }
 
-.review-card .rating {
-    color: rgb(189, 157, 16);
+.review-card .blockquote-footer {
+    color: #5518ab;
 }
 
 .review-form textarea {
@@ -437,7 +437,7 @@ h5 {
     margin: 5px;
 }
 
-/*____ Add/Edit Product ____*/
+/*____ Product Review Card ____*/
 .product-review-card {
     color: #8d2f8d;
     border-radius: 15px;

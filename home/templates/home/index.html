@@ -88,10 +88,13 @@
 
 
               <div class="card text-center review-card">
-                <h3 class="card-title">{{ review.user.username }}</h3>
-                <hr>
-                <p class="card-text">{{ review.comment }}</p>
-                <p class="card-text"><i class="fas fa-star mr-1 rating"></i>{{ review.rating }} / 5</p>
+                <p><i class="fas fa-star mr-1"></i>{{ review.rating }} / 5</p>
+                <blockquote class="blockquote">
+                    <p>{{ review.comment }}</p>
+                    <footer class="blockquote-footer">
+                        {{ review.user.username }}
+                    </footer>
+                </blockquote>
 
                 {% if request.user == review.user %}
                 <hr>
@@ -134,8 +137,7 @@
 
       <output name="amount" id="amount" for="rangeInput">0</output>
 
-      <input type="submit" class="btn btn-pink ml-3" value="Add Review"
-        onclick="return confirm('Testamonial successfully submitted!');">
+      <input type="submit" class="btn btn-pink ml-3" value="Add Review">
 
     </form>
   </div>
