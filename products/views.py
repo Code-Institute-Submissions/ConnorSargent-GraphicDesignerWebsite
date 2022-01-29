@@ -160,3 +160,14 @@ def edit_product_review(request, product_id, productreview_id):
                 return render(request, 'products/edit_product_review.html', {"form": form})
         else:
             return redirect("product_detail", product_id)
+
+
+def delete_product_review(request, product_id, productreview_id):
+    if request.user.is_authenticated:
+        product = get_object_or_404(Product, pk=product_id)
+        productreview = ProductReview.objects.get(product=product, id=productreview_id)
+
+        if request.user == productreview.user:
+            productreview.delete()
+
+        return redirect("product_detail", product_id)
