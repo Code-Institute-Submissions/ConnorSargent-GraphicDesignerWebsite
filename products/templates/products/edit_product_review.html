@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block page_header %}
+    <div class="top-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="container edit-product-review">
+    <h2 class="text-center">Edit Product Review</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form | crispy }}
+        {% if error %}
+        <strong>{{ error }}</strong>
+        {% endif %}
+        <input type="submit" value="Save Changes" class="btn btn-pink">
+    </form>
+</div>
+
+{% endblock %}

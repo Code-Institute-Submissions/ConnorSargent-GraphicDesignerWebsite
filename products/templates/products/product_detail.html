@@ -112,6 +112,17 @@
                         {{ productreview.user.username }}
                     </footer>
                 </blockquote>
+                {% if request.user == productreview.user %}
+                <hr>
+                <div class="row text-center">
+                    <div class="col">
+                        <a class="btn btn-success" href="{% url 'edit_product_review' product.id productreview.id %}">Edit</a>
+                        <a class="btn btn-danger" href=""
+                            onclick="return confirm('Are you sure you want to delete this?');">Delete
+                        </a>
+                    </div>
+                </div>
+                {% endif %}
             </div>
         </div>
         {% endfor %}

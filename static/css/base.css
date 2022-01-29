@@ -451,6 +451,18 @@ h5 {
     color: #5518ab;
 }
 
+/*____ Edit Product Review ____*/
+.edit-product-review textarea {
+    width: 100%;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.edit-product-review input {
+    border-radius: 15px;
+    padding: 10px;
+}
+
 
 /*____ Add/Edit Product ____*/
 .add-edit-product input,
