@@ -61,8 +61,6 @@ This website has been created using Django for the backend. The design is my own
 | 1  	| Owner/Superuser 	| Add new products/services         	| Add new products/services                                                 	|
 | 2  	| Owner/Superuser 	| Edit/Update products and services 	| Change all aspects of a product/service eg. Price, Description, Image ... 	|
 | 3  	| Owner/Superuser 	| Delete product/service            	| Stop the sale of a specific product/service                               	|
-| 4  	| Owner/Superuser 	| View customer orders              	| View customers address and purchased products in order to ship            	|
-| 5  	| Owner/Superuser 	| Receive messages for custom orders  | See specifics for custom order requests           	                        |
 
 ### Design
 - This website uses Django with Jinja templates utilizing built in Django functionality.
