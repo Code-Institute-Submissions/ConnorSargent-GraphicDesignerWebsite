@@ -1,6 +1,6 @@
 # Graphic Designer Website
 
-This website has been created to allow a graphic designer to showcase and sell their work/prints and also allows customers to request custom artworks. The deployed site can be viewed [here]()
+This website has been created to allow a graphic designer to showcase and sell their work/prints. The deployed site can be viewed [here]()
 
 ![Responsive]()
 
@@ -68,8 +68,11 @@ This website has been created using Django for the backend. The design is my own
 - The styling is mostly based upon the Bootstrap with some custom CSS to make the website feel more personal. 
     
 - Font Families (Google Fonts):
-  - [FontName]()
-  - [FontName]()
+  - [Shizuru](https://fonts.google.com/specimen/Shizuru?query=Shizuru)
+  - [Be Vietnam Pro](https://fonts.google.com/specimen/Be+Vietnam+Pro?query=Be+Vietnam+Pro)
+
+- The color scheme is my own, made to match the graphic designers work.
+- Also using bootstraps builtin colors.
 
 ### Wireframes
 Below are the wireframes used to design the app layout.
@@ -101,5 +104,7 @@ Below are the wireframes used to design the app layout.
 ### Database
 Below is a tabulated representation of the database that i have chosen to use in this application.
 
-![database]()
+![database](documentation\wireframes\database.png)
+
+
 
