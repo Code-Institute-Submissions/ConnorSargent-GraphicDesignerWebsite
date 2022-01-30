@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-d_=&s!#060za#7k921l+(vdgwvsph$8rz$!0ryo8p1d^d6z0ty
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [https://git.heroku.com/graphic-designer-website.git]
+ALLOWED_HOSTS = [https://graphic-designer-website.herokuapp.com/]
 
 
 # Application definition
