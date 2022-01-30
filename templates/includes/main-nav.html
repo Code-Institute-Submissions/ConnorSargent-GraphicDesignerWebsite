@@ -1,25 +1,19 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Store
-            </a>
-            <div class="dropdown-menu" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-                <a href="{% url 'products' %}?category=print" class="dropdown-item">Prints</a>
-                <a href="{% url 'products' %}?category=sticker" class="dropdown-item ">Stickers</a>
-            </div>
+        <li class="nav-item">
+            <a href="{% url 'home' %}" class="dropdown-item">Home</a>
         </li>
 
         <li class="nav-item">
-            <a class="font-weight-bold nav-link mr-5" href="#">
-                Me!
-            </a>
+            <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
         </li>
 
         <li class="nav-item">
-            <a class="font-weight-bold nav-link mr-5" href="#">
-                Contact
+            <a href="{% url 'products' %}?category=print" class="dropdown-item">Prints</a>
+        </li>
+
+        <li class="nav-item">
+            <a href="{% url 'products' %}?category=sticker" class="dropdown-item ">Stickers</a>
             </a>
         </li>
     </ul>
