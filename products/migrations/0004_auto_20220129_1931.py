@@ -6,17 +6,17 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0003_productreview'),
+        ("products", "0003_productreview"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='product',
-            name='rating',
+            model_name="product",
+            name="rating",
         ),
         migrations.AddField(
-            model_name='product',
-            name='average_rating',
+            model_name="product",
+            name="average_rating",
             field=models.FloatField(default=0),
         ),
     ]

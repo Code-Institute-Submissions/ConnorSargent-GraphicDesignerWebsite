@@ -6,7 +6,8 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'graphic_designer_website.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE',
+                          'graphic_designer_website.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

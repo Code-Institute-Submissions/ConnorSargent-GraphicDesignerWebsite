@@ -8,19 +8,25 @@ import django_countries.fields
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('profiles', '0001_initial'),
-        ('checkout', '0002_auto_20220128_1452'),
+        ("profiles", "0001_initial"),
+        ("checkout", "0002_auto_20220128_1452"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='order',
-            name='user_profile',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='orders', to='profiles.userprofile'),
+            model_name="order",
+            name="user_profile",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="orders",
+                to="profiles.userprofile",
+            ),
         ),
         migrations.AlterField(
-            model_name='order',
-            name='country',
+            model_name="order",
+            name="country",
             field=django_countries.fields.CountryField(max_length=2),
         ),
     ]

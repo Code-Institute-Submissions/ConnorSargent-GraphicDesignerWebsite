@@ -3,21 +3,23 @@ from .models import Product, Category, ProductReview
 
 # Register your models here.
 
+
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
-        'sku',
-        'name',
-        'category',
-        'price',
-        'image',
+        "sku",
+        "name",
+        "category",
+        "price",
+        "image",
     )
 
-    ordering = ('sku',)
+    ordering = ("sku",)
+
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
-        'friendly_name',
-        'name',
+        "friendly_name",
+        "name",
     )
 
 
