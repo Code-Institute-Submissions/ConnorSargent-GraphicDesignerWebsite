@@ -110,7 +110,7 @@ h5 {
 .allauth-form-inner-content input[type='submit']:hover {
     color: #fff;
     background-color: #8d2f8d;
-    border-color: none;
+    border-color: transparent;
 }
 
 /* ____Toasts (Bootstrap)____ */

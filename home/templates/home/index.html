@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="top-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
+<div class="top-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -29,7 +29,7 @@
       <img src="{{ MEDIA_URL }}efficency.png" class="card-img-top" alt="Efficency Image">
       <div class="card-body">
         <p class="card-text">
-          The world we live in is changing faster than ever before. 
+          The world we live in is changing faster than ever before.
           An efficient turn around on your design needs allows you to keep up.
         </p>
       </div>
@@ -41,7 +41,7 @@
       <div class="card-body">
         <p class="card-text">
           We know how the little things can have a great impact on your business.
-          That is why we offer graphic design solutions at an affordable price. 
+          That is why we offer graphic design solutions at an affordable price.
           Allowing you to focus on what matters.
         </p>
       </div>
@@ -68,9 +68,9 @@
     <div class="col">
       <a class="btn mb-3 mr-1 text-white" href="#carouselbtn" role="button" data-slide="prev">
         <i class="fa fa-arrow-left"></i>
-        <a class="btn mb-3 text-white" href="#carouselbtn" role="button" data-slide="next">
-          <i class="fa fa-arrow-right"></i>
-        </a>
+      </a>
+      <a class="btn mb-3 text-white" href="#carouselbtn" role="button" data-slide="next">
+        <i class="fa fa-arrow-right"></i>
       </a>
     </div>
   </div>
@@ -91,13 +91,13 @@
               <div class="card text-center review-card">
                 <p><i class="fas fa-star mr-1"></i>{{ review.rating }} / 5</p>
                 <blockquote class="blockquote">
-                    <p>{{ review.comment }}</p>
-                    <footer class="blockquote-footer">
-                        {{ review.user.username }}
-                    </footer>
+                  <p>{{ review.comment }}</p>
+                  <footer class="blockquote-footer">
+                    {{ review.user.username }}
+                  </footer>
                 </blockquote>
 
-                {% if request.user == review.user %}
+                {% if request.user == review.user or request.user.is_superuser %}
                 <hr>
                 <div class="row text-center">
                   <div class="col">
@@ -111,7 +111,7 @@
               </div>
 
             </div>
-          {% endfor %}
+            {% endfor %}
           </div>
         </div>
 
@@ -130,9 +130,10 @@
     <h3 class="text-center">Add Testamonial</h3>
     <form class="review-form" action="{% url 'add_review' %}" method="POST">
       {% csrf_token %}
-      <textarea name="comment" id="comment" cols="30" rows="5" class="form-control" placeholder="Leave your comment here..."></textarea></textarea>
+      <textarea name="comment" id="comment" cols="30" rows="5" class="form-control"
+        placeholder="Leave your comment here..."></textarea>
 
-      <label for="rating">Rating</label>
+      <label for="rangeInput">Rating</label>
       <input type="range" id="rangeInput" name="rating" min="0" max="5" value="0" step="0.1"
         oninput="amount.value=rangeInput.value">
 
