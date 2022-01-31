@@ -18,6 +18,8 @@ This website has been created to allow a graphic designer to showcase and sell t
     - [Content](#content)
     - [Acknowledgements](#acknowledgements)
 
+---
+
 ## UX
 This website has been created using Django for the backend. The design is my own inspired by the graphic designers work utilizing bootstrap.
 
@@ -63,6 +65,8 @@ This website has been created using Django for the backend. The design is my own
 | 2  	| Owner/Superuser 	| Edit/Update products and services 	| Change all aspects of a product/service eg. Price, Description, Image ... 	| Owner can edit and delete products
 | 3  	| Owner/Superuser 	| Delete product/service            	| Stop the sale of a specific product/service                               	| Owner can delete products
 
+---
+
 ### Design
 - This website uses Django with Jinja templates utilizing built in Django functionality.
 
@@ -74,6 +78,8 @@ This website has been created using Django for the backend. The design is my own
 
 - The color scheme is my own, made to match the graphic designers work.
 - Also using bootstraps builtin colors.
+
+---
 
 ### Wireframes
 Below are the wireframes used to design the app layout.
@@ -108,11 +114,11 @@ Below is a tabulated representation of the database that i have chosen to use in
 
 ## Technologies Used
 
-1. [Bootstrap](https://getbootstrap.com) - Built with Bootstrap CSS framework. 
-2.  [jQuery](https://jquery.com/) - is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling. The project uses **JQuery** to simplify DOM manipulation.
+1.  [Django Framework](https://www.djangoproject.com/) - Django Python app framework
+2.  [Python](https://www.python.org/) - Python Programming language.
 3.  [PostrgesSQL]() - Heroku app based PostgresSQL Database
-4.  [Django Framework](https://www.djangoproject.com/) - Django Python app framework
-5.  [Visual Studio Code](https://code.visualstudio.com/): Programming code editor created by Microsoft.
+4.  [Bootstrap](https://getbootstrap.com) - Built with Bootstrap CSS framework. 
+5.  [Visual Studio Code](https://code.visualstudio.com/)
 6.  [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) -  web developer tools built directly into the Google Chrome web browser.
 7.  [Git](https://git-scm.com/) - open source distributed version control system.
 8.  [GitHub](https://github.com/) - Web-based hosting service for version control using Git.
@@ -121,7 +127,7 @@ Below is a tabulated representation of the database that i have chosen to use in
 11. [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - used for Hyper text markup language.
 12. [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) - Used for cascading stylesheets.
 13. [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) - Jinja - Templating language.
-15. [Python](https://www.python.org/) - Python Programming language.
+15. [jQuery](https://jquery.com/) - is a fast, small, and feature-rich JavaScript library.
 ---
 
 ## Testing
@@ -160,6 +166,8 @@ Warnings in stripe_elements.js:
 
 I think the Error are refering to the backticks ( ` )
 
+---
+
 ### Lighthouse
 
 When the Lighthouse generated a report for the desktop view, it produced the following results in the following categories:
@@ -193,7 +201,8 @@ When the Lighthouse generated a report for the mobile view, it produced the foll
    #### 8: Open Deployed App in Heroku.
    1. Click on **Open app** in the Heroku account, the application will open in a new tab within the browser
   
----     
+---    
+
 ### AWS (Amazon Web Services):
 - An AWS Account was created with and S3 Bucket instance to store our static files for hosting. IAM user group and content policies were also generated giving us access to the secret access key ID and secret access key for retrieval of file. 
 |Key|Value|
@@ -210,7 +219,7 @@ When the Lighthouse generated a report for the mobile view, it produced the foll
     STATICFILES_LOCATION = 'static'
     DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
     MEDIAFILES_LOCATION = 'media'
-    # Override static and media URLs in production
+    #### Override static and media URLs in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
@@ -235,9 +244,12 @@ Please use this test credit card number instead of your actual credit card numbe
 - CVC : 242
 - ZIP : 42424
 
+---
+
 ### Test Email
 Please use a valid email address to test the email so that you receive a confirmation email.
 
+---
 
 ## Credits
 
