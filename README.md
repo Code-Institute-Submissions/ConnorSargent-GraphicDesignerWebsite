@@ -3,7 +3,7 @@
 This website has been created to allow a graphic designer to showcase and sell their work/prints. The deployed site can be viewed 
 [here](https://graphic-designer-website.herokuapp.com/)
 
-![live site](documentation\website.png)
+![live site](documentation/website.png)
 
 ## Table of Contents
 1. [UX](#ux)
@@ -85,30 +85,30 @@ This website has been created using Django for the backend. The design is my own
 Below are the wireframes used to design the app layout.
 
 #### Home
-![wireframe for home page](documentation\wireframes\WireframesHome.png)
+![wireframe for home page](documentation/wireframes/WireframesHome.png)
 
 #### Log in
-![wireframe for login](documentation\wireframes\WireframesLogin.png)
+![wireframe for login](documentation/wireframes/WireframesLogin.png)
 
 #### Profile
-![wireframe for profile page](documentation\wireframes\WireframesProfile.png)
+![wireframe for profile page](documentation/wireframes/WireframesProfile.png)
 
 #### Contact
-![wireframe for  page](documentation\wireframes\WireframesContact.png)
+![wireframe for  page](documentation/wireframes/WireframesContact.png)
 
 #### Store
-![wireframe for  display](documentation\wireframes\WireframesStore.png)
+![wireframe for  display](documentation/wireframes/WireframesStore.png)
 
 #### Product
-![wireframe for  display](documentation\wireframes\WireframesProduct.png)
+![wireframe for  display](documentation/wireframes/WireframesProduct.png)
 
 #### Product Management
-![wireframe for  display](documentation\wireframes\WireframesProductManagement.png)
+![wireframe for  display](documentation/wireframes/WireframesProductManagement.png)
 
 ## Database
 Below is a tabulated representation of the database that i have chosen to use in this application.
 
-![database](documentation\wireframes\database.png)
+![database](documentation/wireframes/database.png)
 
 ---
 
@@ -137,10 +137,10 @@ Below is a tabulated representation of the database that i have chosen to use in
 All python code has been validated with the Python syntax checker PEP8onlline.
 
 - During validation I still received some error, I think are due to Django.
-![PEP8 Error](documentation\errors\PEP8DjangoError.png)
+![PEP8 Error](documentation/errors/PEP8DjangoError.png)
 
 - I also encountered an PEP8 Error in settings.py, which I could not resolve without breaking the code.
-![Settings.py Linetoolong](documentation\errors\SettingsPYlinetoolong.png)
+![Settings.py Linetoolong](documentation/errors/SettingsPYlinetoolong.png)
 
 ---
 
@@ -172,11 +172,11 @@ I think the Error are refering to the backticks ( ` )
 
 When the Lighthouse generated a report for the desktop view, it produced the following results in the following categories:
 
-![LighthouseDesktop](documentation\lighthouse_desktop.png)
+![LighthouseDesktop](documentation/lighthouse_desktop.png)
 
 When the Lighthouse generated a report for the mobile view, it produced the following results in the following categories:
 
-![LighthouseMobile](documentation\lighthouse_mobile.png)
+![LighthouseMobile](documentation/lighthouse_mobile.png)
 
 ---
 
@@ -228,7 +228,7 @@ When the Lighthouse generated a report for the mobile view, it produced the foll
 2. `cd graphicdesignerwebsite`
 3. Create a virtualenv: `python -m virtualenv venv_name`
 4. `cd venv_name`
-5. Activate it: `source venv_name\bin/activate`
+5. Activate it: `source venv_name/bin/activate`
 6. from within the venv environment use `git clone <repo-name>` and and clone this repo into it.
 7. `pip install -r requirements.txt` 
 8. To run the server on localhost:8000 use `python3 manage.py runserver` open a browser and point it to localhost:8000
