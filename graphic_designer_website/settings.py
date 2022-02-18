@@ -211,7 +211,7 @@ DEFAULT_FROM_EMAIL = "Ellie.c.design@mail.com"
 
 if "DEVELOPMENT" in os.environ:
     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-    DEFAULT_FROM_EMAIL = "Ellie.c.design@example.com"
+    DEFAULT_FROM_EMAIL = "Ellie.c.design@mail.com"
 else:
     EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
     EMAIL_USE_TLS = True

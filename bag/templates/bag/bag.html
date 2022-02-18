@@ -142,7 +142,7 @@
     $('.update-link').click(function (e) {
         var form = $(this).prev('.update-form');
         console.log($(this).prev());
-        form.submit();
+        form[0].requestSubmit();
     })
 
     // Remove item and reload on click
