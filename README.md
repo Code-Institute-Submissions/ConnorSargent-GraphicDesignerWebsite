@@ -85,25 +85,25 @@ This website has been created using Django for the backend. The design is my own
 Below are the wireframes used to design the app layout.
 
 #### Home
-![wireframe for home page](documentation/wireframes/WireframesHome.png)
+![wireframe for home page](documentation/wireframes/wireframes_home.png)
 
 #### Log in
-![wireframe for login](documentation/wireframes/WireframesLogin.png)
+![wireframe for login](documentation/wireframes/wireframes_login.png)
 
 #### Profile
-![wireframe for profile page](documentation/wireframes/WireframesProfile.png)
+![wireframe for profile page](documentation/wireframes/wireframes_profile.png)
 
 #### Contact
-![wireframe for  page](documentation/wireframes/WireframesContact.png)
+![wireframe for  page](documentation/wireframes/wireframes_contact.png)
 
 #### Store
-![wireframe for  display](documentation/wireframes/WireframesStore.png)
+![wireframe for  display](documentation/wireframes/wireframes_store.png)
 
 #### Product
-![wireframe for  display](documentation/wireframes/WireframesProduct.png)
+![wireframe for  display](documentation/wireframes/wireframes_product.png)
 
 #### Product Management
-![wireframe for  display](documentation/wireframes/WireframesProductManagement.png)
+![wireframe for  display](documentation/wireframes/wireframes_product_management.png)
 
 ## Database
 Below is a tabulated representation of the database that i have chosen to use in this application.
@@ -137,10 +137,10 @@ Below is a tabulated representation of the database that i have chosen to use in
 All python code has been validated with the Python syntax checker PEP8onlline.
 
 - During validation I still received some error, I think are due to Django.
-![PEP8 Error](documentation/errors/PEP8DjangoError.png)
+![PEP8 Error](documentation/errors/pep8_django_error.png)
 
-- I also encountered an PEP8 Error in settings.py, which I could not resolve without breaking the code.
-![Settings.py Linetoolong](documentation/errors/SettingsPYlinetoolong.png)
+- I also encountered an PEP8 line too long Error in settings.py, which I could not resolve without breaking the code.
+![Settings.py Linetoolong](documentation/errors/settingspy_line_too_long.png)
 
 ---
 
