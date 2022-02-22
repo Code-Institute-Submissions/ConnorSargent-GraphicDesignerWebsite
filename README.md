@@ -110,6 +110,9 @@ Below is a tabulated representation of the database that i have chosen to use in
 
 ![database](documentation/wireframes/database.png)
 
+### New model added
+![new model](documentation/wireframes/new_model.png)
+
 ---
 
 ## Technologies Used

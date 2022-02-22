@@ -15,7 +15,7 @@ def upcoming(request):
     }
 
     """ A view to return the upcoming page """
-    return render(request, 'upcoming/upcoming.html', context)
+    return render(request, "upcoming/upcoming.html", context)
 
 
 def add_post(request):
@@ -61,7 +61,7 @@ def edit_post(request, post_id):
 
             else:
                 form = PostForm(instance=post)
-                return render(request, 'upcoming/edit_post.html',
+                return render(request, "upcoming/edit_post.html",
                               {"form": form})
         else:
             return redirect("upcoming")
