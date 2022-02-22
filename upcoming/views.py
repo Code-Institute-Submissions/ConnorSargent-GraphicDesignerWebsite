@@ -19,7 +19,7 @@ def upcoming(request):
 
 
 def add_post(request):
-    if request.user.is_authenticated:
+    if request.user.is_superuser:
         if request.method == "POST":
             form = PostForm(request.POST or None)
             if form.is_valid():
@@ -34,3 +34,13 @@ def add_post(request):
         else:
             form = PostForm()
         return render(request, "upcoming", {"form": form})
+
+
+def delete_post(request, post_id):
+    if request.user.is_superuser:
+        post = Post.objects.get(id=post_id)
+
+        if request.user == post.user:
+            post.delete()
+
+        return redirect("upcoming")
