@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="top-container"></div>
+
+<div class="container upcoming-form">
+    <h2 class="text-center">Edit Post</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form | crispy }}
+        {% if error %}
+        <strong>{{ error }}</strong>
+        {% endif %}
+        <input type="submit" value="Save Changes" class="btn btn-pink">
+    </form>
+</div>
+
+{% endblock %}

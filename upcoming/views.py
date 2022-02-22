@@ -44,3 +44,24 @@ def delete_post(request, post_id):
             post.delete()
 
         return redirect("upcoming")
+
+
+def edit_post(request, post_id):
+    if request.user.is_superuser:
+        post = Post.objects.get(id=post_id)
+
+        if request.user.is_superuser:
+
+            if request.method == "POST":
+                form = PostForm(request.POST, instance=post)
+                if form.is_valid():
+                    data = form.save(commit=False)
+                    data.save()
+                    return redirect("upcoming")
+
+            else:
+                form = PostForm(instance=post)
+                return render(request, 'upcoming/edit_post.html',
+                              {"form": form})
+        else:
+            return redirect("upcoming")

@@ -513,7 +513,11 @@ h5 {
 .upcoming-card {
     color: #8d2f8d;
     border-radius: 15px;
-    padding: 10px;
+}
+
+.upcoming-card h3{
+    color: #8d2f8d;
+    font-family: 'Be Vietnam Pro', sans-serif !important;
 }
 
 .upcoming-form textarea {
