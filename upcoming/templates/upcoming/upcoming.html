@@ -19,13 +19,13 @@
   </div>
 
   {% if request.user.is_superuser %}
-  <div class="container">
+  <div class="container upcoming-form">
     <h3 class="text-center">Add Post</h3>
     <form class="post-form" action="{% url 'add_post' %}" method="POST">
       {% csrf_token %}
       <textarea name="title" id="title" cols="1" rows="1" class="form-control" placeholder="Title"></textarea>
-
-      <textarea name="content" id="content" cols="30" rows="5" class="form-control" placeholder="Content"></textarea>
+      <br>
+      <textarea name="content" id=  "content" cols="30" rows="5" class="form-control" placeholder="Content"></textarea>
 
       <input type="submit" class="btn btn-pink ml-3" value="Add Post">
 
@@ -36,7 +36,7 @@
   <div class="container">
     {% for post in posts %}
     <br>
-    <div class="card">
+    <div class="card upcoming-card">
       <div class="card-header text-center">
         {{ post.title }}
       </div>

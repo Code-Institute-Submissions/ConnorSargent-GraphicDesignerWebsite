@@ -508,6 +508,18 @@ h5 {
     margin: 2px;
 }
 
+/* ____ Upcoming ____*/
+
+.upcoming-card {
+    color: #8d2f8d;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.upcoming-form textarea {
+    border-radius: 15px;
+}
+
 /*____Media Queries____*/
 
 
